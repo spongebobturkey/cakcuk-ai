@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cakcuk AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">Cakcuk AI</div>
+    <button id="newChat" class="new-chat">+ Yeni sohbet</button>
+    <div class="side-label">SOHBETLER</div>
+    <div id="history" class="history"></div>
+    <div class="side-bottom">Yapay zekân, kafasına göre takılır.</div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button id="menuBtn" class="menu-btn">☰</button>
+      <div class="mobile-brand">Cakcuk AI</div>
+      <span id="status" class="status">Bağlantı kontrol ediliyor...</span>
+    </header>
+
+    <section id="chat" class="chat">
+      <div id="welcome" class="welcome">
+        <img class="avatar welcome-avatar" src="/cakcuk.jpg" alt="Cakcuk">
+        <h1>Ne haber, kral?</h1>
+        <p>Cakcuk burada. Sor bakalım, neyi çözüyoruz?</p>
+        <div class="suggestions">
+          <button class="suggestion">Bana komik bir laf sok</button>
+          <button class="suggestion">Minecraft'ta yardım et</button>
+          <button class="suggestion">Bir kod yazalım</button>
+        </div>
+      </div>
+    </section>
+
+    <form id="chatForm" class="composer">
+      <textarea id="messageInput" placeholder="Bir şey yaz bakalım..." rows="1" required></textarea>
+      <label class="web-toggle">
+        <input type="checkbox" id="useWeb">
+        Web araştırması
+      </label>
+      <button id="sendBtn" type="submit">➤</button>
+      <div class="disclaimer">Cakcuk AI bazen saçmalayabilir. Önemli bilgileri kontrol et.</div>
+    </form>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
