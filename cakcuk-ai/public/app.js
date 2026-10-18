@@ -182,7 +182,7 @@ async function sendMessage(value) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        messages: c.messages,
+        messages: c.messages.slice(-6),
         useWeb: useWeb.checked
       })
     });
