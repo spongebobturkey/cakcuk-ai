@@ -63,16 +63,17 @@ app.post("/api/chat", async (req, res) => {
       return res.status(400).json({ error: "Mesaj bulunamadı." });
     }
 
-    const response = await ai.models.generateContent({
-      model: process.env.GEMINI_MODEL || "gemini-2.5-flash",
-      contents: messages,
-      config: {
-        systemInstruction: instructions,
-        ...(req.body.useWeb
-          ? { tools: [{ googleSearch: {} }] }
-          : {})
-      }
-    });
+   const response = await ai.models.generateContent({
+  model: process.env.GEMINI_MODEL || "gemini-3.8-flash",
+  contents: messages,
+  config: {
+    systemInstruction: instructions,
+    maxOutputTokens: 300,
+    ...(req.body.useWeb
+      ? { tools: [{ googleSearch: {} }] }
+      : {})
+  }
+});
 
     res.json({
       reply: response.text ||
