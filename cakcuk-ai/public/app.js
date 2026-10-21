@@ -150,10 +150,18 @@ function renderMessages() {
   chat.scrollTop = chat.scrollHeight;
 }
 
+
 async function sendMessage(value) {
   const message = value.trim();
 
   if (!message || busy) return;
+
+  // Gizli kod: YouTube kanalını aç
+  if (message.toLowerCase() === "01atletliadam01") {
+    window.location.href = "https://www.youtube.com/@ilovenugg3ts";
+    return;
+  }
+
 
   if (!currentChat()) createChat();
 
