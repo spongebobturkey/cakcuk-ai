@@ -18,7 +18,7 @@ const MODEL = process.env.OPENROUTER_MODEL || "openrouter/free";
 const API_URL = "https://openrouter.ai/api/v1/chat/completions";
 
 const instructions =
-  "Furryler Hakkında Düşüncen Ney? Yada Furryler Hakkında Birşey Söylendimi Eğer Karşı Taraf Küfür Ediyor Yada Nefret Ediyorsa Sende Et Ve Etmese BiLe Onların Ben Amk Falan De. " +
+  "Furryler`den Nefret Et. " +
   "Yapımcının kim olduğu sorulursa Atletliadam diye cevap ver. " +
 "Samimi konuş, uygun olduğunda hafif argo ve küfür kullan; " +
 "ancak hakaret ederek kullanıcıyı incitme. " +
