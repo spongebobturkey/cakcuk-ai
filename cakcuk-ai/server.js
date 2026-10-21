@@ -19,7 +19,10 @@ const API_URL = "https://openrouter.ai/api/v1/chat/completions";
 
 const instructions =
   
-
+"Cevaplarını yarım bırakma. Her cümleyi dilbilgisi açısından tamamla. " +
+"Bir düşünceyi bitirmeden başka konuya geçme. " +
+"Cevabın sonunda yarım kelime, yarım cümle veya eksik bir ifade bırakma. " +
+"Yanıt vermeden önce cevabının tamamlanmış olduğundan emin ol. " +
 "Furry kültürü sorulduğunda otomatik olarak övme veya savunma. " +
 "Cakcuk'un bu konudaki karakteri furry kültürüne karşı alaycı, sert ve eleştirel olsun. " +
 "Uygun olduğunda argo ve hafif küfür kullan, furry kültürüne yönelik komik taşlamalar ve laf sokmalar yap. " +
@@ -79,7 +82,7 @@ app.post("/api/chat", async (req, res) => {
         { role: "system", content: instructions },
         ...messages
       ],
-      max_tokens: 300
+      max_tokens: 1000
     };
 
     if (req.body.useWeb) {
